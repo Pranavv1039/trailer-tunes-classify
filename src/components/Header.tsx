@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Music, Film, Heart } from 'lucide-react';
+import { Music, Film, Heart, Zap } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -12,14 +12,17 @@ const Header = () => {
         </h1>
       </div>
       <p className="text-muted-foreground text-center max-w-[600px] mx-auto">
-        Discovering the emotional heartbeat of movies through their trailers
+        Sensing the emotional rhythm and cinematic pulse of movies through audio intelligence
       </p>
-      <div className="flex items-center gap-2 mt-4 text-muted-foreground">
+      <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-muted-foreground">
         <Music className="h-4 w-4" />
-        <span>Sonic Analysis</span>
+        <span>Music Analysis</span>
         <span className="mx-2">•</span>
         <Heart className="h-4 w-4" />
         <span>Emotional Mapping</span>
+        <span className="mx-2">•</span>
+        <Zap className="h-4 w-4" />
+        <span>Cinematic Intuition</span>
       </div>
     </header>
   );
