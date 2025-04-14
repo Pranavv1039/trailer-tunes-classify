@@ -14,16 +14,16 @@
     --popover: 222 13% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 262 83% 58%;
+    --primary: 280 75% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 89% 48%;
+    --secondary: 340 65% 65%;
     --secondary-foreground: 222 13% 12%;
 
     --muted: 217 13% 20%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 199 89% 48%;
+    --accent: 340 65% 65%;
     --accent-foreground: 222 13% 12%;
 
     --destructive: 0 62% 50%;
@@ -31,18 +31,18 @@
 
     --border: 217 13% 20%;
     --input: 217 13% 20%;
-    --ring: 199 89% 48%;
+    --ring: 280 75% 60%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 220 13% 9%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary: 280 75% 60%;
     --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 217 13% 20%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217 13% 20%;
-    --sidebar-ring: 199 89% 48%;
+    --sidebar-ring: 280 75% 60%;
   }
 }
 
@@ -53,6 +53,10 @@
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 100% 0%, hsla(var(--primary)/0.1) 0%, transparent 45%),
+      radial-gradient(circle at 0% 100%, hsla(var(--secondary)/0.1) 0%, transparent 45%);
+    background-attachment: fixed;
   }
 }
 
@@ -105,4 +109,22 @@
   bottom: 0;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   animation: wave 2s linear infinite;
+}
+
+/* Emotional gradient for results */
+.emotion-gradient {
+  background-image: linear-gradient(135deg, 
+    hsla(var(--primary)/0.2) 0%, 
+    hsla(var(--secondary)/0.2) 100%);
+  border: 1px solid hsla(var(--primary)/0.1);
+}
+
+/* Cinematic fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cinematic-fade {
+  animation: fadeIn 0.8s ease-out forwards;
 }
