@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# 🎬 CineTune
 
-## Project info
+**“Where music and mood define the movie.”**
 
-**URL**: https://lovable.dev/projects/8909ea3e-9885-4de4-8153-ffb15783e11f
+CineTune is an intelligent movie genre classification system that listens deeply to a trailer’s audio — analyzing **music type**, **speech emotion**, and **acoustic energy** to predict the most likely genres. Inspired by human intuition and cinematic rhythm, CineTune blends emotion with machine learning to understand films the way we do.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 How It Works
 
-**Use Lovable**
+CineTune performs multimodal audio analysis:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8909ea3e-9885-4de4-8153-ffb15783e11f) and start prompting.
+- 🎵 **Music Feature Extraction**  
+  Detects tempo, key, mood, and energy from background score
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🗣️ **Speech Emotion Recognition**  
+  Identifies emotional tones such as affection, anger, fear, and excitement
 
-**Use your preferred IDE**
+- ⚡ **Intensity & Rhythm Detection**  
+  Captures percussive sounds, sudden peaks, and onset rates typical of action/adventure scenes
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+These features are then passed through a trained machine learning model to predict **primary and secondary genres**.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠 Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 🎧 Real-time trailer audio analysis
+- 🎭 Multi-label genre classification (e.g., Action + Drama)
+- 📊 Confidence scores for genre predictions
+- 🔥 Emotion heatmaps and acoustic fingerprinting
+- 🌐 Clean, Apple-inspired UI/UX for demo interface
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📁 Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8909ea3e-9885-4de4-8153-ffb15783e11f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+cinetune/
+├── audio_processing/
+│   └── feature_extraction.py
+├── emotion_detection/
+│   └── emotion_model.py
+├── genre_classification/
+│   └── classifier.py
+├── ui/
+│   └── frontend (React/HTML with Apple-style theme)
+├── examples/
+│   └── rrr_output_sample.json
+└── README.md
