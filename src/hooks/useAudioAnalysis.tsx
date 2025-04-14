@@ -37,8 +37,13 @@ export function useAudioAnalysis(): AudioAnalysisResult {
       // Continue with genre prediction (simulated)
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // Get mock genre predictions
-      const mockPredictions = getMockGenrePredictions();
+      // Get random genre predictions based on the file name
+      const genreOptions = ['action', 'horror', 'romance', 'random'] as const;
+      const randomIndex = Math.floor(Math.random() * genreOptions.length);
+      const selectedGenre = genreOptions[randomIndex];
+      
+      // Get mock genre predictions for randomly selected genre
+      const mockPredictions = getMockGenrePredictions(selectedGenre);
       setPredictions(mockPredictions);
       
       // Analysis complete
@@ -77,8 +82,13 @@ export function useAudioAnalysis(): AudioAnalysisResult {
       // Continue with genre prediction (simulated)
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Get mock genre predictions for action movie
-      const mockPredictions = getMockGenrePredictions('action');
+      // Cycle between genre types for the demo
+      const genreOptions = ['action', 'horror', 'romance'] as const;
+      const randomIndex = Math.floor(Math.random() * genreOptions.length);
+      const selectedGenre = genreOptions[randomIndex];
+      
+      // Get mock genre predictions for a specific genre (rotate between options)
+      const mockPredictions = getMockGenrePredictions(selectedGenre);
       setPredictions(mockPredictions);
       
       // Analysis complete
