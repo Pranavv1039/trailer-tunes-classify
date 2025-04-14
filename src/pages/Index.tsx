@@ -47,12 +47,17 @@ const Index = () => {
         
         <Separator className="my-12 opacity-50" />
         
-        <div className="text-center text-sm text-muted-foreground mb-6">
-          <p>
-            TrailerTunesClassify analyzes movie trailer audio to extract music and speech features for genre prediction.
+        <div className="text-center text-sm text-muted-foreground mb-6 space-y-3">
+          <p className="max-w-2xl mx-auto">
+            CineTune is an intelligent genre classification system that listens deeply to movie trailers — 
+            capturing emotional speech, musical tone, and cinematic rhythm to predict the film's genre.
           </p>
-          <p className="mt-1">
-            This is a demonstration with simulated data. In a real implementation, it would use AI models for audio processing.
+          <p className="max-w-2xl mx-auto">
+            Whether it's the soaring strings of a romance, the pulse of an action sequence, or the tenderness in a character's voice, 
+            CineTune hears what your heart would — and uses it to classify films with empathy and precision.
+          </p>
+          <p className="italic max-w-2xl mx-auto">
+            Because every movie has a feeling — and CineTune is tuned into it.
           </p>
         </div>
       </div>
